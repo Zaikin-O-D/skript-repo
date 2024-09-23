@@ -27,7 +27,7 @@ show_help() {
 # Функция для проверки доступа к пути и обработки ошибок
 check_access() {
     local path=$1
-    if [[ ! -w $path ]]; then
+    if [ ! -w $path ]; then
         echo "Error: No write access to $path" >&2
         exit 1
     fi
